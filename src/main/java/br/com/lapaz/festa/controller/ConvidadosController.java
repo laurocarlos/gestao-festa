@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ConvidadosController {
 	@GetMapping("/convidados")
 	public String list() {
-		return "Lista de Convidados";
+		return "ListaConvidados";
 	}
 }
