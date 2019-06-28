@@ -70,10 +70,13 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+=======
+>>>>>>> cd1187ddac0b148a8657df035e9a1dee4e0f2003
 	</dependencies>
 
 	<build>
