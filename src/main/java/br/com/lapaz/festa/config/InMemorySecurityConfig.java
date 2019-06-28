@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
+@SuppressWarnings("deprecation")
 @Configuration
 public class InMemorySecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
@@ -16,7 +17,6 @@ public class InMemorySecurityConfig extends WebSecurityConfigurerAdapter {
 		builder.inMemoryAuthentication().withUser("alexandre").password("123").roles("USER");
 	}
 
-	@SuppressWarnings("deprecation")
 	@Bean
 	public static NoOpPasswordEncoder passwordEncoder() {
 		return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
