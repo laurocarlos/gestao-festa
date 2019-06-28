@@ -11,10 +11,12 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 @Configuration
 public class InMemorySecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
-	public void configureGlobal(AuthenticationManagerBuilder builder) throws Exception {
+	public String configureGlobal(AuthenticationManagerBuilder builder) throws Exception {
 		builder.inMemoryAuthentication().withUser("Pedro").password("123").roles("USER");
 		builder.inMemoryAuthentication().withUser("thiago").password("123").roles("USER");
 		builder.inMemoryAuthentication().withUser("alexandre").password("123").roles("USER");
+
+		return "redirect:/convidados";
 	}
 
 	@Bean
